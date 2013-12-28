@@ -1,1 +1,7 @@
-[2013-12-28 18:45:48] START
+[2013-12-13 00:11:10] START
+[2013-12-14 12:05:32] CREATE I_news.py: 0
+[2013-12-14 12:06:13] EDIT initaliano/models/I_news.py: 23
+[2013-12-14 12:06:42] CREATE news.py: 0
+[2013-12-14 12:46:42] CREATE news/index.html: 0
+[2013-12-14 12:52:50] CREATE news/create.html: 0
+[2013-12-14 13:17:20] CREATE news/show.html: 0

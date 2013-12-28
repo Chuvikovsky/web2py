@@ -1,6 +1,18 @@
 # -*- coding: utf-8 -*-
 # this file is released under public domain and you can use without limitations
 
+if 0:
+    import gluon
+    from gluon.globals import *
+    from gluon.html import *
+    from gluon.http import *
+    from gluon.sqlhtml import SQLFORM, SQLTABLE, form_factory
+    import gluon.languages.translator as T
+    global auth; auth = gluon.tools.Auth()
+    session = Session()
+    request = Request()
+    response = Response()
+
 #########################################################################
 ## Customize your APP title, subtitle and menus here
 #########################################################################

@@ -1,5 +1,17 @@
 # -*- coding: utf-8 -*-
 
+if 0:
+    import gluon
+    from gluon.globals import *
+    from gluon.html import *
+    from gluon.http import *
+    from gluon.sqlhtml import SQLFORM, SQLTABLE, form_factory
+    import gluon.languages.translator as T
+    global auth; auth = gluon.tools.Auth()
+    session = Session()
+    request = Request()
+    response = Response()
+
 #########################################################################
 ## This scaffolding model makes your app work on Google App Engine too
 ## File is released under public domain and you can use without limitations
@@ -82,3 +94,5 @@ use_janrain(auth, filename='private/janrain.key')
 
 ## after defining tables, uncomment below to enable auditing
 # auth.enable_record_versioning(db)
+
+import datetime, os

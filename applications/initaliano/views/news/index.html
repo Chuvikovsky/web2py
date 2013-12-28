@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+<h1>This is the news/index.html template</h1>
+{{for item in news:}}
+<table>
+    <tr>
+        <td colspan="3">{{=item.newstitle}}</td>
+    </tr>
+    <tr>
+        <td><img src="{{=URL('download', args=item.image)}}" /></td>
+        <td><img src="{{=URL('download', args=item.image_thumb)}}" /></td>
+        <td>{{=item.abstract}} {{=item.total_price}}</td>
+    </tr>
+</table>
+<hr />
+{{=item.newstitle}}
+{{pass}}
+{{#=BEAUTIFY(response._vars)}}
