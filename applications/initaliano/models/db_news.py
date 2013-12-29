@@ -8,10 +8,8 @@ db.define_table('i_news',
     Field('newstext', 'text', length=65536),
     Field('date_of', 'date'),
     Field('created_at', 'datetime', writable=False, readable=False),
-    Field('updated_at', 'datetime', writable=False, readable=False, compute=lambda row: datetime.datetime.now()),
-    Field.Virtual('total_price', lambda row: row.image),
+    Field('updated_at', 'datetime', writable=False, readable=False, compute=lambda row: datetime.datetime.now())
 )
-#db.i_news.thumb = Field.Virtual(lambda row: 'thumbs/'+row.image)
 
 db.i_news.newstitle.requires = IS_NOT_EMPTY()
 db.i_news.newstext.requires = IS_NOT_EMPTY()
