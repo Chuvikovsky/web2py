@@ -1,0 +1,10 @@
+{{extend 'layout_form.html'}}
+
+{{for k,v in items.iteritems():}}
+    {{=k}}
+    {{for key, value in v.iteritems():}}
+        {{=key}} - {{=value}}
+    {{pass}}
+{{pass}}
+
+{{=BEAUTIFY(response._vars)}}
