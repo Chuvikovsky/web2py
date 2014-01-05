@@ -62,6 +62,7 @@ bd_fields3 = [
     'Учебно-образовательный центр Седжон ']
 
 def insert():
+    return
     path_to_files = os.path.join('/Users/chuvikovsky/Documents/webdev/uploads', '1-1')
     dir_list = os.listdir(path_to_files)
     file_content_list = {}
@@ -91,7 +92,7 @@ def insert():
                 file_content_list[file_name]['str_hash'] = file_name
                 file_content_list[file_name]['sex'] = sex_dict_ru[file_content_list[file_name]['sex']]
                 del file_content_list[file_name]['group']
-                db['wkform'].insert(**file_content_list[file_name])
+#                db['wkform'].insert(**file_content_list[file_name])
     return dict(items=file_content_list)
 
 def links_opt(row):

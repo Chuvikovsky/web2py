@@ -3,6 +3,8 @@
 sex_dict = {'m':T('men'), 'f':T('female')}
 sex_dict_ru = {'женский':'f', 'мужской': 'm'}
 
+T.force('ru')
+
 def hash_generator():
     import random
     hash_str = ''
@@ -26,7 +28,7 @@ db.define_table('wkform',
 # отчество
     Field('middlename', 'string', length=125, label=T('Middlename')),
 # дата рождения
-    Field('birth_date', 'string', length=125, label=T('Birth date')),
+    Field('birth_date', 'date', length=125, label=T('Birth date')),
 # пол
     Field('sex', 'string', length=1, label=T('Sex')),
 # гражданство
@@ -56,5 +58,6 @@ db.define_table('wkform',
 # дата заполнения
     Field('completed', 'datetime', label=T('Completed')),
 #hash
-    Field('str_hash', 'string', readable=False, writable=False, label=T('Hash'))
+    Field('str_hash', 'string', readable=False, writable=False, label=T('Hash')),
+    Field('email_hash', 'string', length=125)
 )
